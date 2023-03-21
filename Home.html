@@ -1,10 +1,11 @@
-
 <!DOCTYPE html>
 <html>
   <head>
     <title>Khumbo's Portfolio</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
     <style>
       /* General Styles */
       body {
@@ -76,7 +77,7 @@
     </style>
   </head>
   <body>
-    <header>
+    <header id="header" class="animate__animated animate__bounce">
       <h1>Khumbo's Portfolio</h1>
     </header>
     <main>
@@ -111,5 +112,25 @@
         </ul>
       </section>
     </main>
+    <script>
+    
+    // Select the header element
+const header = document.getElementById('header');
+
+// Add a click event listener to the header element
+header.addEventListener('click', function() {
+  // Add a class to the header element
+  header.classList.add('animate__animated', 'animate__bounce');
+  
+  // Remove the class after the animation finishes
+  setTimeout(() => {
+    header.classList.remove('animate__animated', 'animate__bounce');
+  }, 1000);
+});
+
+    
+    </script>
  </body>
 </html>
+
+
